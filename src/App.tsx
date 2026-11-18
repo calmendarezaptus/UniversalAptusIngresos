@@ -12,6 +12,7 @@ import { cn } from '@/lib/utils'
 import { CALENDAR_URL } from '@/lib/api'
 import { inputCls, labelCls, useTheme } from '@/lib/ui'
 import { edadCache, filtrosIniciales, formatFecha, getIngresos, PRESETS, rango, validateFiltros, type Filtros, type IngresosResponse, type Preset } from '@/lib/ingresos'
+import { MenuButton } from '@/components/MenuButton'
 
 type Modal = { isOpen: boolean; type: StatusModalType; title: string; message: string }
 const REINTENTO_MS = 4000
@@ -125,6 +126,7 @@ function App() {
               <div className="flex items-center gap-3">
                 <h1 className="text-2xl font-bold text-slate-900 tracking-tight">Ingresos (Reporte 03)</h1>
                 <ThemeMenu theme={theme} setTheme={setTheme} />
+                <MenuButton />
               </div>
               <p className="text-slate-500 text-sm mt-0.5">Lo cobrado en el periodo por responsable de facturación, en MXN, con su conciliación de CFDI</p>
             </div>
